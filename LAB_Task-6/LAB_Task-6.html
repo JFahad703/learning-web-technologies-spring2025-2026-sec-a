@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <title>Product Management Page</title>
+    
+    <link rel="stylesheet" href="Pmp.css">
+</head>
+<body>
+
+    <div class="product-card">
+        <h2>Product Details</h2>
+        
+        <div class="info-group">
+            <label>Unit Price:</label>
+            <span id="unit-price-display">$1000</span>
+        </div>
+
+        <div class="input-group">
+            <label for="quantity-input">Quantity:</label>
+            <input type="number" id="quantity-input" min="0" value="0" placeholder="Enter quantity">
+        </div>
+
+        <div class="info-group total-section">
+            <label>Total Price:</label>
+            <input type="text" id="total-price-display" readonly value="$0">
+        </div>
+    </div>
+
+
+    <script src="Pmp.js"></script>
+</body>
+</html>
