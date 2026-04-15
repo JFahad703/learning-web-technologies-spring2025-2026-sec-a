@@ -22,7 +22,7 @@ if(isset($_POST["email"])) {
         </fieldset>
     </form>
 
-<?php
+<?php 
 if($email != "") {
     echo "Your email is: " . $email;
 }
