@@ -1,3 +1,31 @@
+<html lang="en">
+
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+
+    <form method = 'get' action="upload.php" enctype="">
+        Username: <input type="text" name="username" value="<?php if(isset($username)) echo $username; ?>"/><br>
+        Password: <input type="password" name="password" value="<?php if(isset($password)) echo $password; ?>"/><br>
+                <input type="submit" value="Submit"/>
+    
+    </form>            
+
+    <form method = 'post' action="upload.php" enctype="">
+        Username: <input type="text" name="username" value=""/><br>
+        Password: <input type="password" name="password" value=""/><br>
+                <input type="submit" value="Submit"/>
+    
+    </form>    
+
+
+</body>
+</html>
+
+
+
 <?php
 
 
