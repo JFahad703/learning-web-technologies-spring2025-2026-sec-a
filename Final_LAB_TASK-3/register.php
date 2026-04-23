@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <header>
             <div class="logo"><h1><span style="color:#4CAF50;">X</span>Company</h1></div>
             <nav>
-                <a href="index.php">Home</a> | 
+                <a href="publicHome.php">Home</a> | 
                 <a href="login.php">Login</a> | 
                 <a href="register.php">Registration</a>
             </nav>
