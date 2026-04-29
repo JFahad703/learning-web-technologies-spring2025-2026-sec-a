@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <html lang="en">
 <head>
     <title>Dashboard</title>
@@ -47,7 +45,7 @@ session_start();
         <div class="header">
             <img src="logo.png" title="Company Logo" height="40">
             <div class="nav">
-                Logged in as <?=$_SESSION['user']['name']?> |
+                Logged in as 
                 <a href="../controller/logout.php">Logout</a>
             </div>
         </div>
@@ -66,7 +64,7 @@ session_start();
             </div>
 
             <div class="content">
-                <h3>Welcome <?=$_SESSION['user']['name']?></h3>
+                
             </div>
 
         </div>

@@ -2,27 +2,26 @@
 session_start();
 require_once('../model/userModel.php');
 
-if(isset($_POST['login'])){
+if(isset($_REQUEST['submit'])){
+        $username = $_REQUEST['username'];
+        $password = $_REQUEST['password'];
 
-    if(isset($_SESSION['user'])){
-
-        if($_SESSION['user']['username'] == $_POST['username'] &&
-           $_SESSION['user']['password'] == $_POST['password']){
-
-            $_SESSION['status'] = true;
-
-            if(isset($_POST['remember'])){
-                setcookie("user", $_POST['username'], time()+3600);
+        if($username == "" || $password == ""){
+            echo "null username or password!";
+        }else {
+            $user = ['username'=>$username, 'password'=>$password];
+            $status = login($user);
+            if($status){
+                //$_SESSION['status']= true;
+                setcookie('status', 'true', time()+3000, '/');
+                header('location: ../view/dashboard.php');
+            }else{
+                header('location: ../view/login.php');
             }
-
-            header("Location: ../view/dashboard.php");
-            exit();
-        } else {
-            echo "Invalid credentials!";
         }
+    }else{
+        header('location: ../view/login.php');
+    }   
 
-    } else {
-        echo "No registered user found!";
-    }
-}
+
 ?>

@@ -4,7 +4,7 @@ require_once('db.php');
 
 function login($user){
     $con = getConnection();
-    $sql = "select * from users where username='{$user['username']}' and password='{$user['password']}'";
+    $sql = "select * from registration where username='{$user['username']}' and password='{$user['password']}'";
     $result = mysqli_query($con, $sql);
 
     if(mysqli_num_rows($result) == 1){
@@ -15,7 +15,7 @@ function login($user){
 }
 
 function addUser($user){
-
+    
 }
 
 function getUserById($id){
